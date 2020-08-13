@@ -1,6 +1,6 @@
 require 'telegram/bot'
 
-TOKEN = '1373061379:AAE9m200iubSiCnBWrl-vI0AB3yFTQepvSc'
+TOKEN = 'xxx'
 
 
 def reader(type)
