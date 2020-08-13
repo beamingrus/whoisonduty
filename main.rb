@@ -33,7 +33,7 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
     when '/start'
       bot.api.send_message(
         chat_id: message.chat.id,
-        text: "Привет, #{message.from.first_name}. Где потеешь, a2p - 1 или content - 2?"
+        text: "Привет, #{message.from.first_name}. a2p - 1 или content - 2?"
         )
     when 'a2p', '1'
       bot.api.send_message(
@@ -48,7 +48,7 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
     else
       bot.api.send_message(
         chat_id: message.chat.id,
-        text: 'Вы дурні чи шо? Где потеешь, a2p - 1 или content - 2?'
+        text: 'a2p - 1 или content - 2?'
         )
     end
   end
