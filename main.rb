@@ -7,10 +7,10 @@ def reader(type)
   current_path = File.dirname(__FILE__)
 
     if type == 1
-      file_path = "rasp_a2p.txt"
+      file_path = "rasp1.txt"
 
     elsif type == 2
-      file_path = "rasp_content.txt"
+      file_path = "rasp2.txt"
 
     else
       puts "Файл не найден"
@@ -33,7 +33,7 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
     when '/start'
       bot.api.send_message(
         chat_id: message.chat.id,
-        text: "Привет, #{message.from.first_name}. a2p - 1 или content - 2?"
+        text: "Привет, #{message.from.first_name}. 1 или  2?"
         )
     when 'a2p', '1'
       bot.api.send_message(
@@ -48,7 +48,7 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
     else
       bot.api.send_message(
         chat_id: message.chat.id,
-        text: 'a2p - 1 или content - 2?'
+        text: ' 1 или  2?'
         )
     end
   end
